@@ -1,10 +1,10 @@
-import 'dotenv/config'
+import "dotenv/config";
 // require ('dotenv').config();
 import express from "express";
 
 const app = express();
 
-const port =process.env.PORT|| 3000;
+const port = process.env.PORT || 3001;
 
 /* app.get("/",(req,res)=>{
     res.send("Hello from app.get")
@@ -13,7 +13,13 @@ const port =process.env.PORT|| 3000;
 
 app.use(express.json()); // accept data coming in json format
 
-let arrData = [];
+let arrData = [
+  {
+    id: 1,
+    name: "Arjun", 
+    price: 333,
+  },
+];
 let nextID = 1;
 
 // add new data
